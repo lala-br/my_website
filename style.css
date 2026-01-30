@@ -141,8 +141,8 @@ section{
   line-height: 1.8;
 }
 .home-img img{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--main-color);
   transition: 0.4s ease-in-out;
@@ -220,8 +220,8 @@ section{
   text-align: left;
 }
 .about-content img{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   box-shadow: 0 0 25px var(--main-color);
   transition: 0.4s ease-in-out;
@@ -278,10 +278,11 @@ section{
 }
 .projects-box{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   row-gap: 5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .projects-card{
   display: flex;
@@ -298,6 +299,7 @@ section{
   cursor: pointer;
   box-shadow: 0 0 5px var(--main-color);
   transition: 0.3s ease;
+  width: 100%;
 }
 .projects-card:hover{
   box-shadow: 0 0 25px var(--main-color),
@@ -356,7 +358,7 @@ section{
   margin-top: 40px;
   font-size: 16px;
 }
-@media(max-width:1285px){
+@media(max-width:1024px){
   #menu-icon{
     display: block;
   }
@@ -402,8 +404,8 @@ section{
     text-align: center;
   }
   .home-img img{
-    width: 56vw;
-    height: auto;
+    width: 200px;
+    height: 200px;
   }
   .about{
     flex-direction: column-reverse;
@@ -413,34 +415,49 @@ section{
     text-align: center;
     margin: 2rem 0;
   }
-  .about img{
-    width: 52vw;
+  .about-content img{
+    width: 200px;
+    height: 200px;
   }
   .contact form{
     flex-direction: column;
   }
 }
 @media(max-width:768px){
+  html {
+    font-size: 50%;
+  }
   .home-img img,
   .about-content img,
   .projects-card img {
-    width: 250px;
-    height: 250px;
+    width: 180px;
+    height: 180px;
+  }
+  .projects-box {
+    grid-template-columns: 1fr;
   }
   .projects-card {
-    padding: 3rem 1rem;
+    padding: 2rem 1rem;
   }
   .home-content h1 {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
   .home-content h3 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
   .about-content h2 {
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
   .heading {
-    font-size: 5rem;
+    font-size: 3.5rem;
+  }
+  header {
+    padding: 2rem 1rem;
+  }
+  .logo {
+    font-size: 1.8rem;
+  }
+  section {
+    padding: 5rem 1rem;
   }
 }
-
